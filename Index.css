@@ -1,0 +1,237 @@
+:root {
+    --md-dark-color: #1d1d1d;
+    --light-dark-color: #292929;
+    --red-color: #ec1d24;
+    --dark-color: #171717;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--light-dark-color);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+span {
+    color: var(--red-color);
+    font-size: 2rem;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--light-dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+#movietext {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    margin: 10px;
+}
+
+.movie-card {
+    position: relative;
+    margin: 10px;
+    background-color: var(--md-dark-color);
+    border-radius: 10px;
+    height: 350px;
+    width: 250px;
+    border: #171717 solid 2px;
+}
+
+.movie-card img {
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: #171717 solid 2px;
+}
+
+.movie-card img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+#movietext img {
+    max-height: 250px;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#movietext img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.detailsMovie {
+    background-color: var(--dark-color);
+    color: white;
+    max-height: 200px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.9rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.detailsMovie h1{
+    font-size: 1rem;
+    margin: 10px;
+}
+
+
+.button {
+    text-align: center;
+    padding: 40px;
+}
+
+button {
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--light-dark-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--red-color);
+    color: var(--light-dark-color);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+button:active {
+    box-shadow: 10px 10px 50px #ec1d24;
+}
+
+.container {
+    flex: 1;
+}
+
+
+footer {
+    background-color: var(--light-dark-color);
+}
+
+.footer, ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #movietext {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .movie-card {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .movie-card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .detailsMovie {
+        max-height: none;
+        border-radius: 0;
+        margin-top: 10px;
+    }
+
+    .button {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navigation a {
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navigation a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        margin: 10px;
+    }
+}
