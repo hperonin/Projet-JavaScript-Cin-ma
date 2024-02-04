@@ -1,0 +1,117 @@
+:root {
+    --md-dark-color: #1d1d1d;
+    --light-dark-color: #292929;
+    --red-color: #ec1d24;
+    --dark-color: #171717;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--light-dark-color);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+span {
+    color: var(--red-color);
+    font-size: 2rem;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--light-dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    resize: none;
+}
+
+button {
+    background-color: var(--red-color);
+    border: none;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--light-dark-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(to left, #ec1d24, #f9f9f9);
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navigation {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .navigation a {
+        margin: 5px 20px; 
+    }
+}
