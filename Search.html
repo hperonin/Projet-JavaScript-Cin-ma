@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Search.css">
+    <title>Search</title>
+</head>
+<body>
+    <header>
+    <div class="headertop">
+        <div class="logo">
+            <div class="container">
+                <p>CineConnect <span>Village.</span></p>
+            </div>
+        </div>
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="movie.html">Movies</a>
+        </div>
+        <div class="searchContainer">
+                <input type="text" class="formControl" placeholder="Search Movie Title" id="movieSearchBox">
+                <button type="submit" class="sendbuton" id="sendbuton" onclick="findMovies()">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="resultContainer" id="resultContainer">
+            </div>
+    
+            <div class="button">
+                <button class="buttonNext" onclick="loadMoreMovies()">+</button>
+            </div> 
+        </div>
+
+
+    <footer class="footerdown">
+        <div class="Footer">
+            <hr>
+            <ul>
+                <a href="AboutUs.html"><li>About us</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="Search.js"></script>
+
+</body>
+
+</html>

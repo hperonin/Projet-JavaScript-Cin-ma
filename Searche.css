@@ -1,0 +1,255 @@
+:root {
+    --md-dark-color: #1d1d1d;
+    --dark-color: #171717;
+    --light-dark-color: #292929;
+    --red-color: #ec1d24;
+}
+
+header{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--light-dark-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.logo p{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo span{
+    color: var(--red-color);
+    font-size: 2rem;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.resultContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    background-color: var(--light-dark-color);
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+#resultContainer img {
+    max-height: 250px;
+    max-width: 200px;
+    margin-top: 20px;
+    border: #171717 solid 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#resultContainer img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#resultContainer h3 {
+    font-size: 0.8rem;
+    color: white;
+    margin: 10px;
+}
+
+#resultContainer p {
+    margin: 10px;
+    color: white;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+
+.movie-container {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: var(--md-dark-color);
+    border: var(--dark-color) solid 2px;
+    border-radius: 10px;
+
+}
+
+.card {
+    position: relative;
+    height: 400px;
+}
+
+.card-content {
+    padding: 10px;
+    background-color: var(--light-dark-color);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    max-height: 90px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.searchContainer {
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding: 0.2rem;
+}
+
+.containerMore{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+.formControl{
+    border: black solid 2px;
+    border-radius: 25px 0 0 25px;
+    font-size: large;
+    text-align: center;
+    height: 30px;
+    width: 500px;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.sendbuton:active{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.sendbuton{
+    border: black solid 2px;
+    border-radius: 0 25px 25px 0;
+    font-size: large;
+    text-align: center;
+    height: 36px;
+    width: 100px;
+    background-color: var(--dark-color);
+    color: white;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.button {
+    display: none;
+    text-align: center;
+}
+
+.buttonNext {
+    margin-top: 20px;  
+    font-size: 5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    flex: 1;
+}
+
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--light-dark-color);
+}
+
+.footer, ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+}
+
+.fotter, a{
+    text-decoration: none;
+    color: white;
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .resultContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .resultContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resultContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation a {
+        margin-bottom: 10px;
+    }
+
+    .searchContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formControl {
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    .sendbuton {
+        width: 100%;
+        border-radius: 25px;
+    }
+}
